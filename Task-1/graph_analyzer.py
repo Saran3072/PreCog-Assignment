@@ -56,7 +56,7 @@ class GraphAnalyzer:
             }
 
             # Save each year's properties to a separate JSON file
-            file_name = f'./properties/yearly_graph_properties_{year}.json'
+            file_name = f'./properties/{year}.json'
             with open(file_name, 'w') as file:
                 json.dump(properties, file, indent=4)
 

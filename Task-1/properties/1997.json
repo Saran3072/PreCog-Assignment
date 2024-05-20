@@ -1,0 +1,9 @@
+{
+    "density": 0.0005203871362260634,
+    "average_clustering": 0.1300438076624022,
+    "connected_components": 60,
+    "degree_centrality": 0.0010407742724521266,
+    "betweenness_centrality": 1.2164150712620668e-05,
+    "closeness_centrality": 0.007971693853565562,
+    "pagerank": 7.275372862859241e-05
+}
