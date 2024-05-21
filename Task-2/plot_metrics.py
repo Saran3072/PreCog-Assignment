@@ -15,12 +15,12 @@ def plot_community_detection_scores(json_file_path):
 
     # Extracting data for plotting
     dates = list(data.keys())
-    louvian_scores = [data[date]['louvian'] for date in dates]
+    louvain_scores = [data[date]['louvain'] for date in dates]
     girvan_scores = [data[date]['girvan'] for date in dates]
 
     # Plotting
     plt.figure(figsize=(20, 20))  # Set the figure size
-    plt.plot(dates, louvian_scores, label='Louvian', color='blue', marker='o')  # Louvian line
+    plt.plot(dates, louvain_scores, label='louvain', color='blue', marker='o')  # louvain line
     plt.plot(dates, girvan_scores, label='Girvan', color='green', marker='o')  # Girvan line
 
     plt.title('Community Detection Evaluation with Modularity Metric Over Time')  # Title of the plot

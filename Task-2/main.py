@@ -37,14 +37,14 @@ for date in incremental_graphs:
         girvan_analysis = analyze_communities(girvan_newman_communities)
         
         analysis[date] = {
-            "louvian": louvain_analysis,
+            "louvain": louvain_analysis,
             "girvan": girvan_analysis
             }
         
-        CommunityVisualizer.visualize_communities(graph=incremental_graphs[date], communities=louvain_communities, path=f"./plots/louvian/{date}", title="Community Detectio with Louvian")
+        CommunityVisualizer.visualize_communities(graph=incremental_graphs[date], communities=louvain_communities, path=f"./plots/louvain/{date}", title="Community Detectio with louvain")
         CommunityVisualizer.visualize_communities(graph=incremental_graphs[date], communities=girvan_newman_communities, path=f"./plots/girvan/{date}", title="Community Detection with Girvan")
 
-        metrics["louvian"] = CommunityEvaluator.evaluate_modularity(graph=incremental_graphs[date], communities=louvain_communities)
+        metrics["louvain"] = CommunityEvaluator.evaluate_modularity(graph=incremental_graphs[date], communities=louvain_communities)
         metrics["girvan"] =  CommunityEvaluator.evaluate_modularity(graph=incremental_graphs[date], communities=girvan_newman_communities)
         
         results[date] = metrics
