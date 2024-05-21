@@ -7,11 +7,14 @@ from plot import CommunityVisualizer
 from plot_metrics import *
 from analysis import *
 from plot_analytics import *
+from visualizer import Visualizer
 
 edges_file = './data/Cit-HepPh.txt'
 dates_file = './data/cit-HepPh-dates.txt'
 
 num_months = 24
+
+graph_visualise = False
 
 graph, dates = DataLoader.load_graph(edges_file, dates_file)
 incremental_graphs = DataLoader.create_incremental_graphs(graph, dates, num_months=num_months)
@@ -22,6 +25,8 @@ results = {}
 analysis = {}
 
 for date in incremental_graphs:
+    if graph_visualise:
+        Visualizer.visualize_graph(incremental_graphs, date)
     metrics = {}
     start_date = datetime.strptime(date, '%Y-%m')
     if start_date > datetime.strptime('1992-05', '%Y-%m'):
