@@ -90,12 +90,3 @@ class Plotter:
         plt.tight_layout()
         plt.savefig(os.path.join(output_folder, 'all_properties.png'))
         plt.close()
-
-def main():
-    folder_path = './properties'  # Adjust the folder path if needed
-    output_folder = './plots'     # Folder to save the plots
-    properties, years = load_properties(folder_path)
-    plot_properties(properties, years, output_folder)
-
-if __name__ == "__main__":
-    main()
