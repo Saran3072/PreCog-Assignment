@@ -55,9 +55,6 @@ pip install -r Requirements.txt
 
 After completing these steps, you should have a fully configured environment to work on the project.
 
-Here's a README document with the instructions for executing Task-1, Task-2, and the Bonus Task, written in plain text without Markdown formatting:
-
----
 
 **Project Execution Instructions**
 
