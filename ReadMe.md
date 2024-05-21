@@ -70,9 +70,9 @@ cd Task-1
 
 2. **Create Directories:**
 Create directories called 'plots' and 'properties' by entering:
-   ```
-   mkdir plots properties
-   ```
+```
+mkdir plots properties
+```
 
 3. **Run the Main Script:**
 Execute the script with:
